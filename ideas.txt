@@ -1,0 +1,31 @@
+Projeto de reformulação de site: rafinha.dev
+
+Gosto do conceito de minimalismo, mas sem ser vazio e branco, algo simples mas não preguiçoso.
+
+O que precisa ter?
+
+- Sobre mim: falar sobre coisas que gosto, um pouco da minha carreira, formações, etc.
+- Contato: lugar onde pessoas vão poder falar comigo, seja por formulário de mensagem por e-mail ou por WhatsApp.
+- Habilidades: falar sobre as minhas habilidades, sobre o que eu tenho mais familiaridade para trabalhar.
+- Projetos: mostrar meus projetos, coisas que funcionam hoje (minifica.app, criarmeu.site, repositórios do Github).
+
+O que eu gostaria que tivesse?
+
+- Área de currículo: onde pessoas podem visualizar e baixar meu currículo.
+- Área de diplomas: onde pessoas podem ver meus diplomas.
+
+Grande problema de ter um conceito em mente e só pensar no desktop: o mobile.
+Como seria o mobile de algo que eu só pensei em ideias para desktop?
+Mobile first? Credo.
+
+Não gosto de menu de navegação.
+A página tem que ser intuitiva o suficiente para o usuário saber quase que instantaneamente onde está cada coisa.
+
+Preciso de referências.
+
+Sobre mim
+
+Olá, eu sou Rafael de Oliveira Adão, um desenvolvedor que gosta de transformar ideias em projetos reais. O que mais me motiva na programação é ver uma ideia simples se tornar algo funcional, útil e acessível para outras pessoas.
+No meu trabalho você vai encontrar sites, aplicações web, ferramentas e projetos pessoais que criei explorando diferentes tecnologias. Gosto de trabalhar tanto no front-end quanto no back-end, sempre buscando clareza, simplicidade e boas práticas no código.
+Fora do computador, gosto de videogames, música e esportes, e sempre busco aprender algo novo. A programação acabou virando uma rotina que me acompanha no dia a dia, seja estudando, testando ideias ou criando projetos por curiosidade.
+
