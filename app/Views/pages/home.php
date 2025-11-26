@@ -66,7 +66,7 @@
         </ul>
     </header>
     <main>
-        <section id="projetos">
+        <section>
             <h2>Projetos</h2>
             <article>
                 <h3>
@@ -85,7 +85,7 @@
                 </p>
             </article>
         </section>
-        <section id="sobre-mim">
+        <section>
             <h2>Sobre mim</h2>
             <p>
                 Me chamo Rafael de Oliveira Adão, um desenvolvedor que gosta de transformar ideias em projetos reais. O que mais me motiva na programação é ver uma ideia simples se tornar algo funcional, útil e acessível para outras pessoas.
