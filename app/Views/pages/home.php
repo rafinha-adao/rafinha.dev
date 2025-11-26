@@ -41,7 +41,7 @@
             "description": "Rafael de Oliveira Adão, desenvolvedor web focado na criação de projetos e produtos digitais. Portfólio com aplicações, sites, ferramentas e estudos em desenvolvimento front-end e back-end.",
             "sameAs": [
                 "https://github.com/rafinha-adao",
-                "https://www.linkedin.com/in/rafael-oliveira-adão/"
+                "https://linkedin.com/in/rafael-oliveira-adão"
             ]
         }
     </script>
