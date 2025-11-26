@@ -20,9 +20,8 @@
     <title>Rafael de Oliveira Adão | Desenvolvedor Web</title>
     <link rel="canonical" href="<?= base_url() ?>">
     <link rel="shortcut icon" href="<?= base_url('favicon.ico') ?>" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preload" href="<?= base_url('assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') ?>" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?= base_url('assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') ?>" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
     <script type="application/ld+json">
         {
