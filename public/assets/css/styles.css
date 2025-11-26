@@ -1,14 +1,14 @@
 @font-face {
-    font-family: "Inter";
-    src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Roboto Mono";
-    src: url("../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype");
+    font-family: 'Roboto Mono';
+    src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -21,13 +21,17 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter';
     font-optical-sizing: auto;
     font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 1rem;
     background-color: #F2F2F2;
     color: #181818;
     padding: 2rem;
+    scroll-behavior: smooth;
 }
 
 header,
@@ -48,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono';
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 600;
@@ -83,7 +87,7 @@ li {
 }
 
 a {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
     color: #181818;
     font-weight: 700;
 }
