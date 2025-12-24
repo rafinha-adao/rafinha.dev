@@ -131,3 +131,13 @@ article {
         font-size: 2.5rem;
     }
 }
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.features-list {
+    flex-direction: column;
+    gap: 0.5rem;
+}

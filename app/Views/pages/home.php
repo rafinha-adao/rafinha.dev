@@ -83,6 +83,14 @@
                     O <strong>minifica.app</strong> é uma ferramenta online gratuita para comprimir e converter imagens direto no navegador. Criei o projeto para tornar a otimização de imagens mais simples, rápida e acessível para devs, designers e negócios digitais.
                 </p>
             </article>
+            <article>
+                <h3>
+                    <a href="<?= base_url('noshorts') ?>">NoShorts</a>
+                </h3>
+                <p>
+                    O <strong>NoShorts</strong> é uma extensão para Chrome que remove os Shorts do YouTube, deixando a experiência mais limpa, focada e produtiva. Ideal para quem usa o YouTube para estudar, trabalhar ou assistir vídeos longos sem ser puxado para rolagens infinitas. Disponível na <a href="https://chromewebstore.google.com/detail/noshorts/monheoikeapmbjahfokmjedokciedkke" target="_blank" rel="noopener noreferrer">Chrome Web Store</a> com mais de 600 usuários e avaliação de 5.0 estrelas.
+                </p>
+            </article>
         </section>
         <section>
             <h2>Sobre mim</h2>
