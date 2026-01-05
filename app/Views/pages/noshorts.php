@@ -105,11 +105,16 @@
                 Se o NoShorts te ajudou a ter mais foco e menos distrações no YouTube, considere apoiar o projeto. Qualquer contribuição ajuda a manter e melhorar a extensão.
             </p>
             <p>
-                <a href="https://buymeacoffee.com/noshorts" target="_blank" rel="noopener noreferrer">Apoiar pelo Buy me a coffee</a>
+                <script async
+                    src="https://js.stripe.com/v3/buy-button.js">
+                </script>
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1SmESz2ODhPXzqSnmqDlkDun"
+                    publishable-key="pk_live_51ShsX52ODhPXzqSnqQQMYukguSjkIQ7lvR81pqvAJbuuZE6gR2qUqIMHX3RgpIEBUlU50eJdSNMba3KCsz3qYLlF002vlv8cRO">
+                </stripe-buy-button>
             </p>
         </section>
     </main>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="noshorts" data-description="Support me on Buy me a coffee!" data-message="" data-color="#ED1C24" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 
 </html>
