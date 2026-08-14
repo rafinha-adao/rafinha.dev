@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family: "Space Grotesk"; src: url("fontes/SpaceGrotesk-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Bold.ttf"); font-weight: 700; }
+
+  @page { size: 1584px 396px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1584px; height: 396px; }
+
+  body { background: #111111; color: #FFFFFF; position: relative; overflow: hidden; }
+
+  /* prompt no topo, fora da área da foto de perfil (canto inferior esquerdo) */
+  .prompt {
+    position: absolute; top: 40px; left: 48px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 22px; color: #9A9A9A;
+  }
+  .prompt b { color: #FFFFFF; font-weight: 700; }
+  .traffic { letter-spacing: 10px; margin-right: 14px; }
+  .r { color: #FF5F57; } .y { color: #FEBC2E; } .g { color: #28C840; }
+
+  /* bloco principal deslocado à direita (área segura) */
+  .main {
+    position: absolute; right: 72px; top: 108px;
+    text-align: right;
+  }
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 76px; font-weight: 700; letter-spacing: -0.02em;
+    line-height: 1; white-space: nowrap;
+  }
+  .stack {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 22px; color: #9A9A9A; margin-top: 22px;
+  }
+  .site {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24px; color: #FFFFFF; font-weight: 500; margin-top: 14px;
+  }
+
+  /* hairline decorativa inferior */
+  .line { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: #FFFFFF; opacity: 0.08; }
+</style>
+</head>
+<body>
+  <p class="prompt">
+    <span class="traffic"><span class="r">●</span><span class="y">●</span><span class="g">●</span></span>rafaeladao@dev ~ % <b>whoami</b>
+  </p>
+
+  <div class="main">
+    <h1>Desenvolvedor Full Stack</h1>
+    <p class="stack">TypeScript · React · Next.js · Node.js · Supabase · AWS · IA</p>
+    <p class="site">rafinha.dev</p>
+  </div>
+
+  <div class="line"></div>
+</body>
+</html>

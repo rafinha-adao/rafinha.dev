@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Rafael de Oliveira Adão · Currículo · Desenvolvedor Full Stack</title>
+<!-- Metadados abaixo são gravados nas PROPRIEDADES do PDF pelo WeasyPrint:
+     title → Título · author → Autor · description → Assunto · keywords → Palavras-chave.
+     São lidos por ATS, buscadores e indexadores. Visíveis em "Propriedades do documento". -->
+<meta name="author" content="Rafael de Oliveira Adão">
+<meta name="description" content="Currículo de Rafael de Oliveira Adão, desenvolvedor full stack em Limeira/SP (remoto). Stack: Next.js, React, TypeScript, Node.js, Supabase, PostgreSQL, AWS e IA (Claude, MCP, agentes). Experiência em SaaS, automações e integrações. Contato: rafaeldeoliveiraadao@gmail.com · rafinha.dev · github.com/rafinha-adao">
+<meta name="keywords" content="Rafael de Oliveira Adão, Rafael Adão, desenvolvedor full stack, full stack developer, desenvolvedor web, front-end, back-end, Next.js, React, TypeScript, JavaScript, Node.js, Supabase, PostgreSQL, MySQL, PHP, AWS, IA, Claude, MCP, automações, SaaS, WhatsApp API, Limeira, São Paulo, remoto, rafinha.dev, NoShorts">
+<style>
+  /* ============================================================
+     CURRÍCULO — Rafael de Oliveira Adão
+     ------------------------------------------------------------
+     COMO EDITAR:
+       · Todo o conteúdo está no <body>, com comentários ✏️
+         nos pontos editáveis.
+       · Depois de editar, rode:  python3 build.py
+         (gera curriculo.pdf e curriculo.png)
+     ------------------------------------------------------------
+     ESTÉTICA: P&B minimalista. Duas referências dev, discretas:
+       · o prompt zsh de Mac no topo
+       · títulos de seção como comentários de código (//)
+     Todo o resto é legível para qualquer recrutador.
+     ============================================================ */
+
+
+  /* ---------- Fontes embutidas (pasta fontes/) — build portátil ---------- */
+  @font-face { font-family: "Inter"; src: url("fontes/Inter-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "Inter"; src: url("fontes/Inter-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "Inter"; src: url("fontes/Inter-SemiBold.ttf"); font-weight: 600 650; }
+  @font-face { font-family: "Inter"; src: url("fontes/Inter-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontes/JetBrainsMono-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "Space Grotesk"; src: url("fontes/SpaceGrotesk-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "Space Grotesk"; src: url("fontes/SpaceGrotesk-Medium.ttf"); font-weight: 500 650; }
+  @font-face { font-family: "Space Grotesk"; src: url("fontes/SpaceGrotesk-Bold.ttf"); font-weight: 700; }
+
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --ink: #111111;
+    --muted: #66686D;
+    --hairline: #E4E4E4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { width: 210mm; height: 297mm; }
+
+  body {
+    font-family: "Inter", sans-serif;
+    font-size: 9.2pt;
+    line-height: 1.45;
+    color: var(--ink);
+    padding: 12mm 14mm;
+  }
+
+  a { color: var(--ink); text-decoration: none; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+
+  /* ---------- Cabeçalho ---------- */
+  header { margin-bottom: 6mm; }
+
+  .prompt {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8pt; color: var(--muted); margin-bottom: 1.5mm;
+  }
+  .prompt b { color: var(--ink); font-weight: 700; }
+  /* bolinhas de janela como caracteres ● — única cor do documento */
+  .traffic { letter-spacing: 0.35em; margin-right: 0.5mm; }
+  .traffic .r { color: #FF5F57; }
+  .traffic .y { color: #FEBC2E; }
+  .traffic .g { color: #28C840; }
+
+  h1 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 27pt; font-weight: 700; letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .role { font-family: "Space Grotesk", sans-serif; font-size: 11pt; font-weight: 600; margin-top: 1.5mm; }
+
+  .tagline { color: var(--muted); margin-top: 1.5mm; max-width: 158mm; }
+
+  .contact {
+    display: flex; flex-wrap: wrap; gap: 1.2mm 5mm;
+    margin-top: 3.5mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.6pt; color: var(--muted);
+  }
+  .contact a, .contact b { color: var(--ink); font-weight: 500; }
+
+  /* ---------- Grade (table layout: renderização confiável em PDF) ---------- */
+  .grid::after { content: ""; display: block; clear: both; }
+  .grid main { float: left; width: 119mm; }
+  .grid aside { float: right; width: 56mm; }
+
+  h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1.5mm; margin: 0 0 3.5mm;
+  }
+  section + section h2 { margin-top: 5mm; }
+
+  /* ---------- Experiência ---------- */
+  .job { margin-bottom: 4.5mm; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .job h3 { font-family: "Space Grotesk", sans-serif; font-size: 10.2pt; font-weight: 650; }
+  .job .when {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted); font-size: 7.4pt; white-space: nowrap;
+  }
+  .job .ctx { color: var(--muted); font-size: 8.4pt; margin-top: 0.3mm; }
+  .job ul { margin: 1.5mm 0 0 4mm; }
+  .job li { margin-bottom: 1mm; padding-left: 1mm; }
+  .job li::marker { content: "–  "; }
+
+  /* ---------- Formação ---------- */
+  .edu { margin-bottom: 3mm; }
+  .edu b { font-weight: 650; }
+  .edu .when {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted); font-size: 7.4pt;
+  }
+  .edu .what { color: var(--muted); font-size: 8.4pt; }
+
+  /* ---------- Stack (listas limpas) ---------- */
+  .stack-group { margin-bottom: 3.5mm; }
+  .stack-group h4 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.4pt; font-weight: 500; color: var(--muted);
+    margin-bottom: 1mm;
+  }
+  .stack-group p { font-size: 9pt; line-height: 1.6; }
+  .stack-group p b { font-weight: 650; }
+
+  /* ---------- Idiomas ---------- */
+  .lang { margin-bottom: 2.5mm; }
+  .lang b { font-weight: 600; }
+  .lang .level {
+    float: right; font-family: "JetBrains Mono", monospace;
+    font-size: 7.2pt; color: var(--muted);
+  }
+
+  .note { font-size: 8.4pt; color: var(--muted); line-height: 1.45; }
+  .note a { font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--hairline); }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- ✏️ prompt de terminal: bolinhas + comando abrindo este PDF -->
+  <div class="prompt">
+    <span class="traffic"><span class="r">●</span><span class="y">●</span><span class="g">●</span></span> rafaeladao@dev ~ % <b>open curriculo.pdf</b>
+  </div>
+
+  <h1>Rafael de Oliveira Adão</h1>
+
+  <div class="role">Desenvolvedor Full Stack</div>
+
+  <!-- ✏️ resumo de 2 linhas -->
+  <div class="tagline">Desenvolvedor que gosta de transformar ideias em produtos reais, do front-end ao back-end. Busco clareza, simplicidade e boas práticas no código, com atenção ao design e à experiência de quem usa.</div>
+
+  <!-- ✏️ contatos -->
+  <div class="contact">
+    <span><a href="mailto:rafaeldeoliveiraadao@gmail.com">rafaeldeoliveiraadao@gmail.com</a></span>
+    <span><a href="tel:+5519995827504">(19) 99582-7504</a></span>
+    <span><a href="https://rafinha.dev">rafinha.dev</a></span>
+  </div>
+  <div class="contact">
+    <span><a href="https://github.com/rafinha-adao">github.com/rafinha-adao</a></span>
+    <span><a href="https://www.linkedin.com/in/rafael-de-oliveira-adao">in/rafael-de-oliveira-adao</a></span>
+  </div>
+</header>
+
+<div class="grid">
+  <main>
+    <section>
+      <h2>experiência</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Full Stack · Chat Jurídico</h3>
+          <span class="when">jan 2026 → atual</span>
+        </div>
+        <div class="ctx">Plataforma de IA e CRM de WhatsApp para centenas de escritórios de advocacia</div>
+        <ul>
+          <li>Desenvolvimento full stack da plataforma com Next.js, TypeScript, Supabase e AWS, do banco à interface, com atenção constante a UX/UI.</li>
+          <li>Construo o motor de automações da plataforma, do back-end ao editor visual de fluxos, com que os escritórios criam seus próprios atendimentos sem escrever código.</li>
+          <li>Criei do zero o escritorio.ai, construtor de sites para advogados com editor por blocos e SEO local.</li>
+          <li>Integrações com as APIs da Meta (WhatsApp e Conversões) e recursos de IA da plataforma, como o conector para Claude via MCP.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Web · BluePex Cybersecurity</h3>
+          <span class="when">nov 2023 → ago 2025</span>
+        </div>
+        <div class="ctx">Cibersegurança para empresas no Brasil, EUA e Portugal</div>
+        <ul>
+          <li>Desenvolvi o BluePex Cybersecurity Assessment, ferramenta pública que avalia a maturidade em cibersegurança da empresa por questionário e gera um relatório final (bluepex.com.br/assessment).</li>
+          <li>Desenvolvi e mantive sistemas e interfaces web dos produtos da empresa.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Web · Agência Madison</h3>
+          <span class="when">mar 2023 → nov 2023</span>
+        </div>
+        <ul>
+          <li>Criei sites institucionais, landing pages e lojas com WordPress, PHP, SCSS e JavaScript, com foco em SEO técnico e performance.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Estágio em Desenvolvimento · Agência Álamo</h3>
+          <span class="when">mai 2022 → out 2022</span>
+        </div>
+        <ul>
+          <li>Desenvolvi páginas e componentes com HTML, CSS, JavaScript e WordPress no ciclo completo de entrega ao cliente.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Estágio em Suporte · Gplus Sistemas</h3>
+          <span class="when">jun 2021 → set 2021</span>
+        </div>
+        <ul>
+          <li>Suporte técnico a usuários de software de gestão, com diagnóstico e documentação de soluções.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Estágio em Informática · Colégio Bilíngue Da Vinci</h3>
+          <span class="when">ago 2020 → mai 2021</span>
+        </div>
+        <ul>
+          <li>Manutenção de computadores e impressoras, e suporte a professores e alunos no uso de ferramentas digitais.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>projetos</h2>
+      <div class="job">
+        <div class="job-head">
+          <h3><a href="https://noshorts.app">NoShorts</a> · extensão para navegador</h3>
+          <span class="when">projeto pessoal</span>
+        </div>
+        <ul>
+          <li>Remove os Shorts e oculta comentários para um YouTube mais limpo e focado. Milhares de usuários e avaliação máxima na Chrome Web Store.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <aside>
+    <section>
+      <h2>stack</h2>
+
+      <!-- ✏️ negrito = o que você usa no dia a dia -->
+      <div class="stack-group">
+        <h4>front-end/</h4>
+        <p><b>TypeScript</b> · <b>React</b> · <b>Next.js</b> · <b>Tailwind</b> · JavaScript · HTML · CSS/SCSS</p>
+      </div>
+      <div class="stack-group">
+        <h4>back-end &amp; dados/</h4>
+        <p><b>Node.js</b> · <b>PostgreSQL / Supabase</b> · Python · PHP · MySQL</p>
+      </div>
+      <div class="stack-group">
+        <h4>ia &amp; cloud/</h4>
+        <p><b>Claude API</b> · <b>AWS</b> · MCP · Agentes e automações</p>
+      </div>
+      <div class="stack-group">
+        <h4>ferramentas/</h4>
+        <p>Git · Figma · WordPress</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>formação</h2>
+      <div class="edu">
+        <b>Técnico em Informática + Ensino Médio</b><br>
+        <span class="what">COTIL / UNICAMP</span><br>
+        <span class="when">fev 2020 → dez 2022</span>
+      </div>
+      <div class="edu">
+        <b>Análise e Desenvolvimento de Sistemas</b><br>
+        <span class="what">UniCesumar</span><br>
+        <span class="when">2023 → 2024</span>
+      </div>
+      <div class="edu">
+        <b>Curso de Inglês</b><br>
+        <span class="what">CNA Idiomas</span><br>
+        <span class="when">jul 2025 → dez 2025</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>idiomas</h2>
+      <div class="lang">
+        <b>Português</b> <span class="level">nativo</span>
+      </div>
+      <div class="lang">
+        <b>Inglês</b> <span class="level">intermediário/avançado</span>
+      </div>
+      <div class="lang">
+        <b>Espanhol</b> <span class="level">básico</span>
+      </div>
+    </section>
+
+  </aside>
+</div>
+
+</body>
+</html>
