@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO básico ============ -->
+<title>Rafael de Oliveira Adão · Desenvolvedor Full Stack</title>
+<meta name="description" content="Rafael de Oliveira Adão, desenvolvedor full stack. Next.js, React, TypeScript, Node.js, Supabase, PostgreSQL, AWS e IA (Claude, MCP). Criador do NoShorts. Experiência, projetos e contato.">
+<meta name="author" content="Rafael de Oliveira Adão">
+<link rel="canonical" href="https://rafinha.dev/">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph / Twitter ============ -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Rafael de Oliveira Adão · Desenvolvedor Full Stack">
+<meta property="og:description" content="Next.js, TypeScript, Supabase, AWS e IA. Criador do NoShorts. Experiência, projetos e contato.">
+<meta property="og:url" content="https://rafinha.dev/">
+<meta property="og:image" content="https://rafinha.dev/og.png"><!-- ✏️ crie um og.png 1200x630 -->
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ============ JSON-LD (schema.org/Person) ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rafael de Oliveira Adão",
+  "alternateName": "Rafael Adão",
+  "jobTitle": "Desenvolvedor Full Stack",
+  "description": "Desenvolvedor full stack que gosta de transformar ideias em produtos reais, do front-end ao back-end. Next.js, React, TypeScript, Node.js, Supabase, PostgreSQL, AWS e IA (Claude, MCP, agentes e automações).",
+  "url": "https://rafinha.dev",
+  "email": "mailto:rafaeldeoliveiraadao@gmail.com",
+  "sameAs": [
+    "https://github.com/rafinha-adao",
+    "https://www.linkedin.com/in/rafael-de-oliveira-adao",
+    "https://noshorts.app"
+  ],
+  "worksFor": { "@type": "Organization", "name": "Chat Jurídico", "url": "https://chatjuridico.com.br" },
+  "alumniOf": { "@type": "EducationalOrganization", "name": "Colégio Técnico de Limeira (COTIL/UNICAMP)" },
+  "knowsAbout": ["Next.js","React","TypeScript","JavaScript","Node.js","Supabase","PostgreSQL","MySQL","PHP","AWS","Inteligência Artificial","Claude","MCP","Automações","SaaS","UX/UI"],
+  "knowsLanguage": ["pt-BR","en","es"]
+}
+</script>
+
+<!-- ============ Fontes (mesmas do currículo) ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     rafinha.dev: versão web do currículo
+     Mesma identidade: P&B, Inter + JetBrains Mono, hairlines,
+     prompt de terminal com as bolinhas como única cor.
+     ============================================================ */
+  :root {
+    --ink: #111111;
+    --muted: #66686C;
+    --hairline: #E5E5E5;
+    --bg: #FFFFFF;
+    --maxw: 860px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 16px; line-height: 1.55;
+    color: var(--ink); background: var(--bg);
+    padding: clamp(24px, 5vw, 64px) clamp(20px, 5vw, 48px);
+  }
+
+  .page { max-width: var(--maxw); margin: 0 auto; }
+
+  a { color: var(--ink); text-decoration: none; }
+  a:hover { border-bottom: 1px solid var(--ink); }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+
+  /* ---------- Cabeçalho ---------- */
+  .site-header { border-bottom: 1.5px solid var(--ink); padding-bottom: 28px; margin-bottom: 36px; }
+
+  .prompt {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; color: var(--muted); margin-bottom: 14px;
+  }
+  .prompt b { color: var(--ink); font-weight: 700; }
+  .traffic { letter-spacing: 0.35em; margin-right: 6px; }
+  .traffic .r { color: #FF5F57; }
+  .traffic .y { color: #FEBC2E; }
+  .traffic .g { color: #28C840; }
+  .cursor { display: inline-block; width: 8px; height: 15px; background: var(--ink);
+            vertical-align: -2px; margin-left: 2px; animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  h1 { font-family: "Space Grotesk", "Inter", sans-serif; font-size: clamp(34px, 6vw, 46px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+
+  .role { font-family: "Space Grotesk", sans-serif; font-size: 19px; font-weight: 600; margin-top: 8px; }
+
+  .tagline { color: var(--muted); margin-top: 10px; max-width: 62ch; }
+
+  .contact {
+    display: flex; flex-wrap: wrap; gap: 6px 24px;
+    margin-top: 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; color: var(--muted);
+  }
+  .contact a { color: var(--ink); font-weight: 500; }
+
+  .cta { margin-top: 20px; }
+  .cta a {
+    display: inline-block; font-family: "JetBrains Mono", monospace;
+    font-size: 13px; font-weight: 500;
+    border: 1.5px solid var(--ink); border-radius: 6px;
+    padding: 8px 16px;
+  }
+  .cta a:hover { background: var(--ink); color: #fff; border-bottom-color: var(--ink); }
+
+  /* ---------- Grade: 2 colunas → 1 no mobile ---------- */
+  .grid { display: grid; grid-template-columns: 1fr 260px; gap: 0 48px; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+
+  h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 8px; margin: 0 0 18px;
+  }
+  section + section h2 { margin-top: 40px; }
+
+  /* ---------- Experiência / Projetos ---------- */
+  .job { margin-bottom: 26px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .job h3 { font-family: "Space Grotesk", sans-serif; font-size: 17px; font-weight: 600; }
+  .job .when {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted); font-size: 12px; white-space: nowrap;
+  }
+  .job .ctx { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .job ul { margin: 10px 0 0 20px; }
+  .job li { margin-bottom: 7px; padding-left: 4px; }
+  .job li::marker { content: "–  "; }
+
+  /* ---------- Formação ---------- */
+  .edu { margin-bottom: 16px; }
+  .edu b { font-weight: 650; }
+  .edu .what { color: var(--muted); font-size: 14px; display: block; }
+  .edu .when { font-family: "JetBrains Mono", monospace; color: var(--muted); font-size: 12px; }
+
+  /* ---------- Stack ---------- */
+  .stack-group { margin-bottom: 18px; }
+  .stack-group h4 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; font-weight: 500; color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .stack-group p { font-size: 15px; line-height: 1.7; }
+  .stack-group p b { font-weight: 650; }
+
+  /* ---------- Idiomas ---------- */
+  .lang { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .lang b { font-weight: 600; }
+  .lang span { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); }
+
+  /* ---------- Rodapé ---------- */
+  .site-footer {
+    margin-top: 56px; padding-top: 20px;
+    border-top: 1px solid var(--hairline);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; color: var(--muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  .site-footer a { color: var(--muted); }
+  .site-footer a:hover { color: var(--ink); }
+
+  /* ---------- Impressão ---------- */
+  @media print {
+    body { padding: 0; font-size: 12px; }
+    .cta, .cursor, .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="site-header">
+  <p class="prompt" aria-hidden="true">
+    <span class="traffic"><span class="r">●</span><span class="y">●</span><span class="g">●</span></span>rafaeladao@dev ~ % <b>open rafinha.dev</b><span class="cursor"></span>
+  </p>
+
+  <h1>Rafael de Oliveira Adão</h1>
+  <p class="role">Desenvolvedor Full Stack</p>
+
+  <p class="tagline">Desenvolvedor que gosta de transformar ideias em produtos reais, do front-end ao back-end. Busco clareza, simplicidade e boas práticas no código, com atenção ao design e à experiência de quem usa.</p>
+
+  <nav class="contact" aria-label="Contato">
+    <a href="mailto:rafaeldeoliveiraadao@gmail.com">rafaeldeoliveiraadao@gmail.com</a>
+    <a href="tel:+5519995827504">(19) 99582-7504</a>
+    <a href="https://github.com/rafinha-adao" rel="me">github.com/rafinha-adao</a>
+    <a href="https://www.linkedin.com/in/rafael-de-oliveira-adao" rel="me">in/rafael-de-oliveira-adao</a>
+  </nav>
+
+  <p class="cta"><a href="/curriculo.pdf" download>↓ baixar currículo em PDF</a></p>
+</header>
+
+<div class="grid">
+  <main>
+    <section aria-labelledby="exp">
+      <h2 id="exp">Experiência</h2>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Full Stack · <a href="https://chatjuridico.com.br">Chat Jurídico</a></h3>
+          <p class="when">jan 2026 → atual</p>
+        </div>
+        <p class="ctx">Plataforma de IA e CRM de WhatsApp para centenas de escritórios de advocacia</p>
+        <ul>
+          <li>Desenvolvimento full stack da plataforma com Next.js, TypeScript, Supabase e AWS, do banco à interface, com atenção constante a UX/UI.</li>
+          <li>Construo o motor de automações da plataforma, do back-end ao editor visual de fluxos, com que os escritórios criam seus próprios atendimentos sem escrever código.</li>
+          <li>Criei do zero o escritorio.ai, construtor de sites para advogados com editor por blocos e SEO local.</li>
+          <li>Integrações com as APIs da Meta (WhatsApp e Conversões) e recursos de IA da plataforma, como o conector para Claude via MCP.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Web · <a href="https://bluepex.com.br">BluePex Cybersecurity</a></h3>
+          <p class="when">nov 2023 → ago 2025</p>
+        </div>
+        <p class="ctx">Cibersegurança para empresas no Brasil, EUA e Portugal</p>
+        <ul>
+          <li>Desenvolvi o BluePex Cybersecurity Assessment, ferramenta pública que avalia a maturidade em cibersegurança da empresa por questionário e gera um relatório final (bluepex.com.br/assessment).</li>
+          <li>Desenvolvi e mantive sistemas e interfaces web dos produtos da empresa.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Desenvolvedor Web · Agência Madison</h3>
+          <p class="when">mar 2023 → nov 2023</p>
+        </div>
+        <ul>
+          <li>Criei sites institucionais, landing pages e lojas com WordPress, PHP, SCSS e JavaScript, com foco em SEO técnico e performance.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Estágio em Desenvolvimento · Agência Álamo</h3>
+          <p class="when">mai 2022 → out 2022</p>
+        </div>
+        <ul>
+          <li>Desenvolvi páginas e componentes com HTML, CSS, JavaScript e WordPress no ciclo completo de entrega ao cliente.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Estágio em Suporte · Gplus Sistemas</h3>
+          <p class="when">jun 2021 → set 2021</p>
+        </div>
+        <ul>
+          <li>Suporte técnico a usuários de software de gestão, com diagnóstico e documentação de soluções.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Estágio em Informática · Colégio Bilíngue Da Vinci</h3>
+          <p class="when">ago 2020 → mai 2021</p>
+        </div>
+        <ul>
+          <li>Manutenção de computadores e impressoras, e suporte a professores e alunos no uso de ferramentas digitais.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="proj">
+      <h2 id="proj">Projetos</h2>
+      <article class="job">
+        <div class="job-head">
+          <h3><a href="https://noshorts.app">NoShorts</a> · extensão para navegador</h3>
+          <p class="when">projeto pessoal</p>
+        </div>
+        <ul>
+          <li>Remove os Shorts e oculta comentários para um YouTube mais limpo e focado. Milhares de usuários e avaliação máxima na Chrome Web Store.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <aside>
+    <section aria-labelledby="stack">
+      <h2 id="stack">Stack</h2>
+      <div class="stack-group">
+        <h4>front-end/</h4>
+        <p><b>TypeScript</b> · <b>React</b> · <b>Next.js</b> · <b>Tailwind</b> · JavaScript · HTML · CSS/SCSS</p>
+      </div>
+      <div class="stack-group">
+        <h4>back-end &amp; dados/</h4>
+        <p><b>Node.js</b> · <b>PostgreSQL / Supabase</b> · Python · PHP · MySQL</p>
+      </div>
+      <div class="stack-group">
+        <h4>ia &amp; cloud/</h4>
+        <p><b>Claude API</b> · <b>AWS</b> · MCP · Agentes e automações</p>
+      </div>
+      <div class="stack-group">
+        <h4>ferramentas/</h4>
+        <p>Git · Figma · WordPress</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="edu">
+      <h2 id="edu">Formação</h2>
+      <div class="edu">
+        <b>Técnico em Informática + Ensino Médio</b>
+        <span class="what">COTIL / UNICAMP</span>
+        <span class="when">fev 2020 → dez 2022</span>
+      </div>
+      <div class="edu">
+        <b>Análise e Desenvolvimento de Sistemas</b>
+        <span class="what">UniCesumar</span>
+        <span class="when">2023 → 2024</span>
+      </div>
+      <div class="edu">
+        <b>Curso de Inglês</b>
+        <span class="what">CNA Idiomas</span>
+        <span class="when">jul 2025 → dez 2025</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="lang">
+      <h2 id="lang">Idiomas</h2>
+      <p class="lang"><b>Português</b> <span>nativo</span></p>
+      <p class="lang"><b>Inglês</b> <span>intermediário/avançado</span></p>
+      <p class="lang"><b>Espanhol</b> <span>básico</span></p>
+    </section>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <p>© <span id="ano">2026</span> Rafael de Oliveira Adão</p>
+  <p><a href="https://github.com/rafinha-adao">github</a> · <a href="https://www.linkedin.com/in/rafael-de-oliveira-adao">linkedin</a> · <a href="https://noshorts.app">noshorts</a></p>
+</footer>
+
+</div>
+<script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>

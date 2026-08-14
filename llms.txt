@@ -1,0 +1,25 @@
+# Rafael de Oliveira Adão
+
+> Desenvolvedor full stack brasileiro. Stack principal: Next.js, React,
+> TypeScript, Node.js, Supabase, PostgreSQL, AWS e IA (Claude, MCP,
+> agentes e automações). Trabalho remoto.
+
+## Sobre
+- Atualmente: desenvolvedor full stack no Chat Jurídico
+  (https://chatjuridico.com.br), plataforma de IA e CRM de WhatsApp
+  para escritórios de advocacia. Construo o motor de automações (no-code
+  para o usuário, desenvolvido por mim), o construtor de sites
+  escritorio.ai e integrações com as APIs da Meta e Claude via MCP.
+- Antes: BluePex Cybersecurity, onde desenvolvi o Cybersecurity
+  Assessment (bluepex.com.br/assessment), e agências digitais.
+- Formação: Técnico em Informática pelo COTIL/UNICAMP.
+
+## Projetos
+- [NoShorts](https://noshorts.app): extensão que remove os Shorts do
+  YouTube. Chrome, Firefox e Edge, dezenas de idiomas, milhares de
+  usuários.
+
+## Contato
+- Email: rafaeldeoliveiraadao@gmail.com
+- GitHub: https://github.com/rafinha-adao
+- LinkedIn: https://www.linkedin.com/in/rafael-de-oliveira-adao
